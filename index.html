@@ -1,138 +1,178 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Sherin Muckatira</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<style>
-			body {
-				color: black;
-			}
-			.container {
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 0 20px;
-			}
-			.row {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: stretch; /* Stretch items to fill the container */
-			}
-			.col-4 {
-				flex: 0 0 36%; /* Decrease width by 10% (from 40% to 36%) */
-				max-width: 36%;
-				padding-right: 20px;
-				display: flex;
-				flex-direction: column;
-			}
-			.col-8 {
-				flex: 0 0 64%; /* Increase width to compensate */
-				max-width: 64%;
-			}
-			.icon-links a {
-				font-size: 1.2em;
-				margin-right: 15px;
-				color: #007bff;
-				text-decoration: none;
-				display: inline-flex;
-				align-items: center;
-			}
-			.icon-links a:hover {
-				text-decoration: underline;
-			}
-			.icon-links a i {
-				margin-right: 5px;
-			}
-			.icon-links .icon-text {
-				font-size: 0.8em;
-				vertical-align: middle;
-			}
-			h1 {
-				font-size: 1.5em;
-				font-weight: bold;
-				margin-bottom: 0.5em;
-			}
-			.profile-image-container {
-				flex-grow: 1;
-				position: relative;
-				padding: 5% 0; /* Add padding to top and bottom */
-			}
-			.profile-image {
-				position: absolute;
-				top: 5%; /* Align with top padding */
-				left: 0;
-				width: 100%;
-				height: 90%; /* Reduce height by 10% */
-				object-fit: cover;
-				object-position: top;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="profile-image-container">
-						<img src="images/profilepic.jpg" alt="Sherin Muckatira" class="profile-image" />
-					</div>
-				</div>
-				<div class="col-8">
-					<h1>Sherin Muckatira</h1>
-					<p class="icon-links">
-						<a href="https://scholar.google.com/citations?user=jG_G61YAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i><span class="icon-text">Google Scholar</span></a>
-						<a href="files/SherinMuckatira_Resume.pdf" target="_blank"><i class="far fa-file-alt"></i><span class="icon-text">CV</span></a>
-					</p>
-					<p>I am currently pursuing a Ph.D. in Computer Science with a focus on NLP at the University of Massachusetts, Lowell. I am advised by Dr. Anna Rumshisky.
-						My research interests include: small language models, parameter efficient fine tuning and pre-training, and prompting. Before my PhD, I earned a Master’s in Electrical Engineering and worked in Dr. Jieping Ye's lab. 
-						I also gained industry experience at semiconductor companies including Qualcomm and NXP Semiconductors.	
-					</p>
+
+<head>
+	<title>Sherin Muckatira</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		body {
+			color: black;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			/* Stretch items to fill the container */
+		}
+
+		.col-4 {
+			flex: 0 0 36%;
+			/* Decrease width by 10% (from 40% to 36%) */
+			max-width: 36%;
+			padding-right: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.col-8 {
+			flex: 0 0 64%;
+			/* Increase width to compensate */
+			max-width: 64%;
+		}
+
+		.icon-links a {
+			font-size: 1.2em;
+			margin-right: 15px;
+			color: #007bff;
+			text-decoration: none;
+			display: inline-flex;
+			align-items: center;
+		}
+
+		.icon-links a:hover {
+			text-decoration: underline;
+		}
+
+		.icon-links a i {
+			margin-right: 5px;
+		}
+
+		.icon-links .icon-text {
+			font-size: 0.8em;
+			vertical-align: middle;
+		}
+
+		h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+			margin-bottom: 0.5em;
+		}
+
+		.profile-image-container {
+			flex-grow: 1;
+			position: relative;
+			padding: 5% 0;
+			/* Add padding to top and bottom */
+		}
+
+		.profile-image {
+			position: absolute;
+			top: 5%;
+			/* Align with top padding */
+			left: 0;
+			width: 100%;
+			height: 90%;
+			/* Reduce height by 10% */
+			object-fit: cover;
+			object-position: top;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<div class="profile-image-container">
+					<img src="images/profilepic.jpg" alt="Sherin Muckatira" class="profile-image" />
 				</div>
 			</div>
-
-			<h2>News</h2>
-			<ul>
-				<li><strong>[April 2024]</strong> Our paper on Emergent Abilities accepted to NAACL Findings 2024!</li>
-				<li><strong>[March 2024]</strong> Our work on ReLoRA accepted to ICLR 2024!</li>
-			</ul>
-
-			<h2>Publications</h2>
-			<ul>
-				<li><a href="https://arxiv.org/abs/2404.02204" target="_blank"><strong>Emergent Abilities in Reduced-Scale Generative Language Models</strong></a><br>
-					<strong>S Muckatira</strong>, V Deshpande, V Lialin, A Rumshisky<br>
-					NAACL Findings, 2024</li>
-				<li><a href="https://arxiv.org/abs/2307.05695" target="_blank"><strong>ReLoRA: High-Rank Training Through Low-Rank Updates</strong></a><br>
-					V Lialin, <strong>S Muckatira</strong>, N Shivagunde, A Rumshisky<br>
-					ICML, 2024</li>
-				<li><a href="https://arxiv.org/abs/2404.02054" target="_blank"><strong>Deconstructing In-Context Learning: Understanding Prompts via Corruption</strong></a><br>
-					N Shivagunde, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
-					LREC-Coling, 2024</li>
-				<li><a href="https://arxiv.org/abs/2311.05821" target="_blank"><strong>Let's Reinforce Step by Step</strong></a><br>
-					S Pan, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
-					NeurIPS WANT Workshop, 2023</li>
-				<li><a href="https://arxiv.org/abs/2008.12141" target="_blank"><strong>Properties Of Winning Tickets On Skin Lesion Classification</strong></a><br>
-				<strong>S Muckatira</strong><br>
-					ECCV WiCV Workshop, 2020</li>
-				<li><a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank"><strong>Image-level and group-level models for Drosophila gene expression pattern annotation</strong></a><br>
-					Q Sun, <strong>S Muckatira</strong>, L Yuan, S Ji, S Newfeld, S Kumar, J Ye<br>
-					BMC bioinformatics</li>
-			</ul>
-
-			<h2>YouTube</h2>
-			<p>I run a dedicated YouTube channel where I provide overviews on cutting-edge research papers. Topics I cover include: Prompting, Alignment, Distillation, Pre-Training, and LLM Robotics</p>
-			<p>Check out my <a href="https://www.youtube.com/@sherinmuckatira8333" target="_blank"><i class="fab fa-youtube"></i> YouTube channel</a> and subscribe for regular updates!</p>
-
-			<h2>Contact</h2>
-			<p class="icon-links">
-				<a href="mailto:sherinbojappa_muckatira@student.uml.edu"><i class="far fa-envelope"></i><span class="icon-text">Email</span></a>
-				<a href="https://github.com/SherinBojappa" target="_blank"><i class="fab fa-github"></i><span class="icon-text">GitHub</span></a>
-				<a href="https://www.linkedin.com/in/sherinmuckatira" target="_blank"><i class="fab fa-linkedin"></i><span class="icon-text">LinkedIn</span></a>
-				<a href="https://www.youtube.com/channel/UCGl2Z4Q1oFRzpSCmqGr9GHw" target="_blank"><i class="fab fa-youtube"></i><span class="icon-text">YouTube</span></a>
-			</p>
+			<div class="col-8">
+				<h1>Sherin Muckatira</h1>
+				<p class="icon-links">
+					<a href="https://scholar.google.com/citations?user=jG_G61YAAAAJ&hl=en" target="_blank"><i
+							class="fas fa-graduation-cap"></i><span class="icon-text">Google Scholar</span></a>
+					<a href="files/SherinMuckatira_Resume.pdf" target="_blank"><i class="far fa-file-alt"></i><span
+							class="icon-text">CV</span></a>
+				</p>
+				<p>I am currently pursuing a Ph.D. in Computer Science with a focus on NLP at the University of
+					Massachusetts, Lowell. I am advised by Dr. Anna Rumshisky.
+					My research interests include: small language models, parameter efficient fine tuning and
+					pre-training, and prompting. Before my PhD, I earned a Master’s in Electrical Engineering and worked
+					in Dr. Jieping Ye's lab.
+					I also gained industry experience at semiconductor companies including Qualcomm and NXP
+					Semiconductors.
+				</p>
+			</div>
 		</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
-	</body>
+		<h2>News</h2>
+		<ul>
+			<li><strong>[April 2024]</strong> Our paper on Emergent Abilities accepted to NAACL Findings 2024!</li>
+			<li><strong>[March 2024]</strong> Our work on ReLoRA accepted to ICLR 2024!</li>
+		</ul>
+
+		<h2>Publications</h2>
+		<ul>
+			<li><a href="https://arxiv.org/abs/2404.02204" target="_blank"><strong>Emergent Abilities in Reduced-Scale
+						Generative Language Models</strong></a><br>
+				<strong>S Muckatira</strong>, V Deshpande, V Lialin, A Rumshisky<br>
+				NAACL Findings, 2024
+			</li>
+			<li><a href="https://arxiv.org/abs/2307.05695" target="_blank"><strong>ReLoRA: High-Rank Training Through
+						Low-Rank Updates</strong></a><br>
+				V Lialin, <strong>S Muckatira</strong>, N Shivagunde, A Rumshisky<br>
+				ICLR, 2024</li>
+			<li><a href="https://arxiv.org/abs/2404.02054" target="_blank"><strong>Deconstructing In-Context Learning:
+						Understanding Prompts via Corruption</strong></a><br>
+				N Shivagunde, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
+				LREC-Coling, 2024</li>
+			<li><a href="https://arxiv.org/abs/2311.05821" target="_blank"><strong>Let's Reinforce Step by
+						Step</strong></a><br>
+				S Pan, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
+				NeurIPS WANT Workshop, 2023</li>
+			<li><a href="https://arxiv.org/abs/2008.12141" target="_blank"><strong>Properties Of Winning Tickets On Skin
+						Lesion Classification</strong></a><br>
+				<strong>S Muckatira</strong><br>
+				ECCV WiCV Workshop, 2020
+			</li>
+			<li><a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank"><strong>Image-level
+						and group-level models for Drosophila gene expression pattern annotation</strong></a><br>
+				Q Sun, <strong>S Muckatira</strong>, L Yuan, S Ji, S Newfeld, S Kumar, J Ye<br>
+				BMC bioinformatics</li>
+		</ul>
+
+		<h2>YouTube</h2>
+		<p>I run a dedicated YouTube channel where I provide overviews on cutting-edge research papers. Topics I cover
+			include: Prompting, Alignment, Distillation, Pre-Training, and LLM Robotics</p>
+		<p>Check out my <a href="https://www.youtube.com/@sherinmuckatira8333" target="_blank"><i
+					class="fab fa-youtube"></i> YouTube channel</a> and subscribe for regular updates!</p>
+
+		<h2>Contact</h2>
+		<p class="icon-links">
+			<a href="mailto:sherinbojappa_muckatira@student.uml.edu"><i class="far fa-envelope"></i><span
+					class="icon-text">Email</span></a>
+			<a href="https://github.com/SherinBojappa" target="_blank"><i class="fab fa-github"></i><span
+					class="icon-text">GitHub</span></a>
+			<a href="https://www.linkedin.com/in/sherinmuckatira" target="_blank"><i class="fab fa-linkedin"></i><span
+					class="icon-text">LinkedIn</span></a>
+			<a href="https://www.youtube.com/channel/UCGl2Z4Q1oFRzpSCmqGr9GHw" target="_blank"><i
+					class="fab fa-youtube"></i><span class="icon-text">YouTube</span></a>
+		</p>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/main.js"></script>
+</body>
+
 </html>
