@@ -250,6 +250,27 @@
 			font-style: italic;
 		}
 
+		/* News Section */
+		.news-item {
+			margin-bottom: 15px;
+			padding-left: 20px;
+			position: relative;
+			line-height: 1.6;
+		}
+
+		.news-item::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #1772d0;
+			font-weight: bold;
+		}
+
+		.news-date {
+			font-weight: bold;
+			color: #333;
+		}
+
 		/* Blog Section */
 		.blog-item {
 			margin-bottom: 35px;
@@ -331,6 +352,7 @@
 	<nav class="navbar">
 		<div class="navbar-content">
 			<a href="#bio">Bio</a>
+			<a href="#news">News</a>
 			<a href="#education">Education</a>
 			<a href="#experience">Experience</a>
 			<a href="#publications">Publications</a>
@@ -359,6 +381,23 @@
 					pre-training to reduce computational cost while maintaining performance. Through my research,
 					I aim to make large language model (LLM) training more transparent, efficient, and interpretable.
 				</p>
+			</div>
+		</div>
+
+		<!-- News Section -->
+		<div class="section" id="news">
+			<h2 class="section-title">News</h2>
+			<div class="news-item">
+				<span class="news-date">[May 2025]</span> Completed Amazon Applied Science Internship at Alexa AI.
+			</div>
+			<div class="news-item">
+				<span class="news-date">[May 2024]</span> Completed an Applied Science internship at Amazon.
+			</div>
+			<div class="news-item">
+				<span class="news-date">[April 2024]</span> Our paper on Emergent Abilities accepted to NAACL Findings 2024!
+			</div>
+			<div class="news-item">
+				<span class="news-date">[March 2024]</span> Our work on ReLoRA accepted to ICLR 2024!
 			</div>
 		</div>
 
@@ -545,7 +584,6 @@
 			<div class="blog-item">
 				<a href="grokking.html" class="blog-title">Grokking</a>
 				<div class="blog-subtitle">Literature Review</div>
-				<div class="blog-meta">Coming soon</div>
 			</div>
 		</div>
 	</div>
