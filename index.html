@@ -1,184 +1,554 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
 	<title>Sherin Muckatira</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	<style>
-		body {
-			color: black;
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
 		}
 
-		.container {
-			max-width: 800px;
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 17px;
+			line-height: 1.6;
+			color: #333;
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+			padding-top: 60px;
+		}
+
+		/* Navigation Bar */
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #333;
+			z-index: 1000;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		}
+
+		.navbar-content {
+			max-width: 900px;
 			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			padding: 0 20px;
 		}
 
-		.row {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: stretch;
-			/* Stretch items to fill the container */
-		}
-
-		.col-4 {
-			flex: 0 0 36%;
-			/* Decrease width by 10% (from 40% to 36%) */
-			max-width: 36%;
-			padding-right: 20px;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.col-8 {
-			flex: 0 0 64%;
-			/* Increase width to compensate */
-			max-width: 64%;
-		}
-
-		.icon-links a {
-			font-size: 1.2em;
-			margin-right: 15px;
-			color: #007bff;
+		.navbar a {
+			color: white;
 			text-decoration: none;
-			display: inline-flex;
-			align-items: center;
+			padding: 18px 20px;
+			display: inline-block;
+			font-size: 16px;
+			transition: background-color 0.3s, color 0.3s;
 		}
 
-		.icon-links a:hover {
-			text-decoration: underline;
+		.navbar a:hover {
+			background-color: #555;
+			color: #f09228;
 		}
 
-		.icon-links a i {
-			margin-right: 5px;
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 40px 20px;
 		}
 
-		.icon-links .icon-text {
-			font-size: 0.8em;
-			vertical-align: middle;
+		/* Add scroll margin to sections */
+		.section {
+			scroll-margin-top: 70px;
 		}
 
-		h1 {
-			font-size: 1.5em;
-			font-weight: bold;
-			margin-bottom: 0.5em;
+		.header-section {
+			scroll-margin-top: 70px;
 		}
 
-		.profile-image-container {
-			flex-grow: 1;
-			position: relative;
-			padding: 5% 0;
-			/* Add padding to top and bottom */
+		/* Header Section with Profile */
+		.header-section {
+			display: flex;
+			align-items: flex-start;
+			gap: 30px;
+			margin-bottom: 50px;
 		}
 
 		.profile-image {
-			position: absolute;
-			top: 5%;
-			/* Align with top padding */
-			left: 0;
-			width: 100%;
-			height: 90%;
-			/* Reduce height by 10% */
+			width: 200px;
+			height: 250px;
 			object-fit: cover;
-			object-position: top;
+			border-radius: 8px;
+			flex-shrink: 0;
+		}
+
+		.header-content {
+			flex: 1;
+		}
+
+		.name {
+			font-family: 'Courier New', monospace;
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #333;
+		}
+
+		.links {
+			margin-bottom: 15px;
+		}
+
+		.links a {
+			color: #1772d0;
+			text-decoration: none;
+			margin-right: 15px;
+			font-size: 15px;
+		}
+
+		.links a:hover {
+			color: #f09228;
+			text-decoration: underline;
+		}
+
+		.bio {
+			font-size: 17px;
+			line-height: 1.6;
+			text-align: justify;
+		}
+
+		/* Section Styling */
+		.section {
+			margin-bottom: 40px;
+		}
+
+		.section-title {
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 20px;
+			padding-bottom: 5px;
+			border-bottom: 2px solid #1772d0;
+		}
+
+		/* Education Section */
+		.education-item {
+			margin-bottom: 25px;
+		}
+
+		.education-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 5px;
+		}
+
+		.institution {
+			font-weight: bold;
+			font-size: 18px;
+			color: #333;
+		}
+
+		.location {
+			font-style: italic;
+			color: #666;
+		}
+
+		.degree-info {
+			display: flex;
+			justify-content: space-between;
+			color: #666;
+			margin-bottom: 5px;
+		}
+
+		.advisor {
+			color: #666;
+			font-style: italic;
+		}
+
+		/* Experience Section */
+		.experience-item {
+			margin-bottom: 25px;
+		}
+
+		.experience-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 5px;
+		}
+
+		.position {
+			font-weight: bold;
+			font-size: 18px;
+			color: #333;
+		}
+
+		.company {
+			font-weight: bold;
+			color: #1772d0;
+		}
+
+		.experience-details {
+			color: #666;
+			margin-bottom: 8px;
+		}
+
+		.experience-item ul {
+			margin-left: 20px;
+			margin-top: 8px;
+		}
+
+		.experience-item li {
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		/* Publications Section */
+		.publication-item {
+			margin-bottom: 20px;
+			padding-left: 20px;
+			position: relative;
+		}
+
+		.publication-item::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #1772d0;
+			font-weight: bold;
+		}
+
+		.publication-title {
+			font-weight: bold;
+			color: #1772d0;
+			text-decoration: none;
+		}
+
+		.publication-title:hover {
+			color: #f09228;
+			text-decoration: underline;
+		}
+
+		.publication-authors {
+			color: #333;
+		}
+
+		.publication-venue {
+			color: #666;
+			font-style: italic;
+		}
+
+		/* Blog Section */
+		.blog-item {
+			margin-bottom: 35px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+
+		.blog-item:last-child {
+			border-bottom: none;
+		}
+
+		.blog-title {
+			font-size: 22px;
+			font-weight: bold;
+			color: #1772d0;
+			text-decoration: none;
+			display: block;
+			margin-bottom: 8px;
+			line-height: 1.3;
+		}
+
+		.blog-title:hover {
+			color: #f09228;
+			text-decoration: underline;
+		}
+
+		.blog-subtitle {
+			font-size: 16px;
+			color: #666;
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+
+		.blog-meta {
+			font-size: 14px;
+			color: #999;
+			font-style: italic;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			.header-section {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+
+			.profile-image {
+				width: 150px;
+				height: 188px;
+			}
+
+			.name {
+				font-size: 26px;
+			}
+
+			.education-header,
+			.experience-header,
+			.degree-info {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.links {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.bio {
+				text-align: left;
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-4">
-				<div class="profile-image-container">
-					<img src="images/profilepic.jpg" alt="Sherin Muckatira" class="profile-image" />
-				</div>
-			</div>
-			<div class="col-8">
-				<h1>Sherin Muckatira</h1>
-				<p class="icon-links">
-					<a href="https://scholar.google.com/citations?user=jG_G61YAAAAJ&hl=en" target="_blank"><i
-							class="fas fa-graduation-cap"></i><span class="icon-text">Google Scholar</span></a>
-					<a href="files/SherinMuckatira_Resume.pdf" target="_blank"><i class="far fa-file-alt"></i><span
-							class="icon-text">CV</span></a>
-				</p>
-				<p>I am a PhD student at the University of
-					Massachusetts, Lowell. I am advised by Dr. Anna Rumshisky. I am broadly interested in understanding
-					and improving the generalization,
-					interpretability,
-					and efficiency of language models. My research spans training dynamics,
-					representation learning, and the emergence of complex behavior in large models.
-					I also explore methods for efficient pre-training
-					to reduce computational cost while maintaining performance. Through my research, I aim to contribute
-					to make LLM training in making large language model (LLM) training
-					more transparent, efficient, and interpretable.
+	<!-- Navigation Bar -->
+	<nav class="navbar">
+		<div class="navbar-content">
+			<a href="#bio">Bio</a>
+			<a href="#education">Education</a>
+			<a href="#experience">Experience</a>
+			<a href="#publications">Publications</a>
+			<a href="#blogs">Blogs</a>
+		</div>
+	</nav>
 
+	<div class="container">
+		<!-- Header Section -->
+		<div class="header-section" id="bio">
+			<img src="images/profilepic.jpg" alt="Sherin Muckatira" class="profile-image" />
+			<div class="header-content">
+				<h1 class="name">Sherin Muckatira</h1>
+				<div class="links">
+					<a href="https://scholar.google.com/citations?user=jG_G61YAAAAJ&hl=en" target="_blank">Google Scholar</a>
+					<a href="https://github.com/SherinBojappa" target="_blank">GitHub</a>
+					<a href="https://www.linkedin.com/in/sherinmuckatira" target="_blank">LinkedIn</a>
+					<a href="files/SherinMuckatira_Resume.pdf" target="_blank">CV</a>
+					<a href="mailto:smuckati@cs.uml.edu">Email</a>
+				</div>
+				<p class="bio">
+					I am a PhD student at the University of Massachusetts, Lowell, advised by Dr. Anna Rumshisky.
+					I am broadly interested in understanding and improving the generalization, interpretability,
+					and efficiency of language models. My research spans training dynamics, representation learning,
+					and the emergence of complex behavior in large models. I also explore methods for efficient
+					pre-training to reduce computational cost while maintaining performance. Through my research,
+					I aim to make large language model (LLM) training more transparent, efficient, and interpretable.
 				</p>
 			</div>
 		</div>
 
-		<h2>News</h2>
-		<ul>
-			<li><strong>[May 2025]</strong> Completed Amazon Applied Science Internship at Alexa AI.</li>
-			<li><strong>[May 2024]</strong> Completed an Applied Science internship at Amazon.</li>
-			<li><strong>[April 2024]</strong> Our paper on Emergent Abilities accepted to NAACL Findings 2024!</li>
-			<li><strong>[March 2024]</strong> Our work on ReLoRA accepted to ICLR 2024!</li>
-		</ul>
+		<!-- Education Section -->
+		<div class="section" id="education">
+			<h2 class="section-title">Education</h2>
 
-		<h2>Publications</h2>
-		<ul>
-			<li><a href="https://arxiv.org/abs/2404.02204" target="_blank"><strong>Emergent Abilities in Reduced-Scale
-						Generative Language Models</strong></a><br>
-				<strong>S Muckatira</strong>, V Deshpande, V Lialin, A Rumshisky<br>
-				NAACL Findings, 2024
-			</li>
-			<li><a href="https://arxiv.org/abs/2307.05695" target="_blank"><strong>ReLoRA: High-Rank Training Through
-						Low-Rank Updates</strong></a><br>
-				V Lialin, <strong>S Muckatira</strong>, N Shivagunde, A Rumshisky<br>
-				ICLR, 2024</li>
-			<li><a href="https://arxiv.org/abs/2404.02054" target="_blank"><strong>Deconstructing In-Context Learning:
-						Understanding Prompts via Corruption</strong></a><br>
-				N Shivagunde, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
-				LREC-Coling, 2024</li>
-			<li><a href="https://arxiv.org/abs/2311.05821" target="_blank"><strong>Let's Reinforce Step by
-						Step</strong></a><br>
-				S Pan, V Lialin, <strong>S Muckatira</strong>, A Rumshisky<br>
-				NeurIPS WANT Workshop, 2023</li>
-			<li><a href="https://arxiv.org/abs/2008.12141" target="_blank"><strong>Properties Of Winning Tickets On Skin
-						Lesion Classification</strong></a><br>
-				<strong>S Muckatira</strong><br>
-				ECCV WiCV Workshop, 2020
-			</li>
-			<li><a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank"><strong>Image-level
-						and group-level models for Drosophila gene expression pattern annotation</strong></a><br>
-				Q Sun, <strong>S Muckatira</strong>, L Yuan, S Ji, S Newfeld, S Kumar, J Ye<br>
-				BMC bioinformatics</li>
-		</ul>
+			<div class="education-item">
+				<div class="education-header">
+					<span class="institution">University of Massachusetts Lowell</span>
+					<span class="location">Lowell, Massachusetts</span>
+				</div>
+				<div class="degree-info">
+					<span>Ph.D. in Computer Science; GPA 4.00</span>
+					<span>September 2021 – Present</span>
+				</div>
+				<div class="advisor">Advisor: Prof. Anna Rumshisky</div>
+			</div>
 
-		<h2>YouTube</h2>
-		<p>I run a dedicated YouTube channel where I provide overviews on cutting-edge research papers. Topics I cover
-			include: Prompting, Alignment, Distillation, Pre-Training, and LLM Robotics</p>
-		<p>Check out my <a href="https://www.youtube.com/@sherinmuckatira8333" target="_blank"><i
-					class="fab fa-youtube"></i> YouTube channel</a> and subscribe for regular updates!</p>
+			<div class="education-item">
+				<div class="education-header">
+					<span class="institution">Arizona State University</span>
+					<span class="location">Tempe, Arizona</span>
+				</div>
+				<div class="degree-info">
+					<span>Master of Science in Electrical Engineering; GPA 3.79</span>
+					<span>August 2011 – May 2013</span>
+				</div>
+			</div>
 
-		<h2>Contact</h2>
-		<p class="icon-links">
-			<a href="mailto:sherinbojappa_muckatira@student.uml.edu"><i class="far fa-envelope"></i><span
-					class="icon-text">Email</span></a>
-			<a href="https://github.com/SherinBojappa" target="_blank"><i class="fab fa-github"></i><span
-					class="icon-text">GitHub</span></a>
-			<a href="https://www.linkedin.com/in/sherinmuckatira" target="_blank"><i class="fab fa-linkedin"></i><span
-					class="icon-text">LinkedIn</span></a>
-			<a href="https://www.youtube.com/channel/UCGl2Z4Q1oFRzpSCmqGr9GHw" target="_blank"><i
-					class="fab fa-youtube"></i><span class="icon-text">YouTube</span></a>
-		</p>
+			<div class="education-item">
+				<div class="education-header">
+					<span class="institution">Sir M Visvesvaraya Institute of Technology</span>
+					<span class="location">Bangalore, India</span>
+				</div>
+				<div class="degree-info">
+					<span>Bachelor of Engineering in Electronics and Communication; GPA 4.00</span>
+					<span>September 2007 – July 2011</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Experience Section -->
+		<div class="section" id="experience">
+			<h2 class="section-title">Experience</h2>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Research Assistant</span>
+					<span class="location">Lowell, MA</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">University of Massachusetts Lowell</span> | May 2023 – Present
+				</div>
+				<div class="advisor">PI: Prof. Anna Rumshisky</div>
+				<ul>
+					<li>Researching ways to improve the generalization, interpretability, and efficiency of language models.</li>
+					<li>Studying training dynamics and representation learning to better understand the emergence of complex behaviors.</li>
+					<li>Developing and testing efficient pre-training methods that reduce computational cost without sacrificing performance.</li>
+					<li>Working toward making LLM training more transparent and practical for both academic and applied settings.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Applied Scientist Intern</span>
+					<span class="location">Boston, MA</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">Amazon</span> | May 2025 – August 2025
+				</div>
+				<div class="advisor">PI: Dr. Rinat Khaziev</div>
+				<ul>
+					<li>Researched and developed multilingual evaluation methods for large language models, focusing on improving performance beyond English.</li>
+					<li>Built and trained judge models for multi-turn conversation evaluation across multiple languages.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Applied Scientist Intern</span>
+					<span class="location">Remote</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">Amazon</span> | May 2024 – August 2024
+				</div>
+				<div class="advisor">PI: Ikkei Itoku</div>
+				<ul>
+					<li>Built a synthetic data generation pipeline to address challenges of data scarcity and privacy in HR analytics.</li>
+					<li>Developed datasets of career-related documents with structured annotations.</li>
+					<li>Fine-tuned Mistral-7B-Instruct model with synthetic data, enabling it to identify specific guidelines demonstrated by employees.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Research Aide</span>
+					<span class="location">Tempe, AZ</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">Arizona State University</span> | July 2012 – May 2013
+				</div>
+				<div class="advisor">PI: Prof. Jieping Ye</div>
+				<ul>
+					<li>Implemented Gene expression pattern annotation using SIFT feature extraction on images in the Berkeley Drosophila Genome Project (BDGP).</li>
+					<li>Constructed Codebooks using Bag of Words and Sparse Coding Approach.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Senior Software Engineer</span>
+					<span class="location">Boxborough, MA</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">Qualcomm</span> | October 2016 – December 2021
+				</div>
+				<ul>
+					<li>Developed firmware for the physical layer of Wireless LAN chips using the Wifi 802.11 protocol.</li>
+					<li>Designed and implemented features such as Spectral Scan and Radar Detection.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<div class="experience-header">
+					<span class="position">Applications Software Engineer</span>
+					<span class="location">Chandler, AZ</span>
+				</div>
+				<div class="experience-details">
+					<span class="company">NXP</span> | June 2013 – October 2016
+				</div>
+				<ul>
+					<li>Developed signal processing applications for radio communication, focusing on transmit and receive chains on a Vector Signal Processor for Power Amplifier characterization.</li>
+					<li>Implemented communication interfaces between host processors and co-processors to enhance functionality in Power Amplifier characterization applications.</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Publications Section -->
+		<div class="section" id="publications">
+			<h2 class="section-title">Publications</h2>
+
+			<div class="publication-item">
+				<a href="https://arxiv.org/abs/2404.02204" target="_blank" class="publication-title">Emergent Abilities in Reduced-Scale Generative Language Models</a><br>
+				<span class="publication-authors"><strong>S. Muckatira</strong>, V. Deshpande, V. Lialin, A. Rumshisky</span><br>
+				<span class="publication-venue">NAACL Findings, 2024</span>
+			</div>
+
+			<div class="publication-item">
+				<a href="https://arxiv.org/abs/2307.05695" target="_blank" class="publication-title">ReLoRA: High-Rank Training Through Low-Rank Updates</a><br>
+				<span class="publication-authors">V. Lialin, <strong>S. Muckatira</strong>, N. Shivagunde, A. Rumshisky</span><br>
+				<span class="publication-venue">ICLR, 2024</span>
+			</div>
+
+			<div class="publication-item">
+				<a href="https://arxiv.org/abs/2404.02054" target="_blank" class="publication-title">Deconstructing In-Context Learning: Understanding Prompts via Corruption</a><br>
+				<span class="publication-authors">N. Shivagunde, V. Lialin, <strong>S. Muckatira</strong>, A. Rumshisky</span><br>
+				<span class="publication-venue">LREC-Coling, 2024</span>
+			</div>
+
+			<div class="publication-item">
+				<a href="https://arxiv.org/abs/2311.05821" target="_blank" class="publication-title">Let's Reinforce Step by Step</a><br>
+				<span class="publication-authors">S. Pan, V. Lialin, <strong>S. Muckatira</strong>, A. Rumshisky</span><br>
+				<span class="publication-venue">NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following</span>
+			</div>
+
+			<div class="publication-item">
+				<a href="https://arxiv.org/abs/2008.12141" target="_blank" class="publication-title">Properties Of Winning Tickets On Skin Lesion Classification</a><br>
+				<span class="publication-authors"><strong>S. Muckatira</strong></span><br>
+				<span class="publication-venue">ECCV WiCV Workshop, 2020</span>
+			</div>
+
+			<div class="publication-item">
+				<a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank" class="publication-title">Image-level and group-level models for Drosophila gene expression pattern annotation</a><br>
+				<span class="publication-authors">Q. Sun, <strong>S. Muckatira</strong>, L. Yuan, S. Ji, S. Newfeld, S. Kumar, J. Ye</span><br>
+				<span class="publication-venue">BMC bioinformatics, 2013</span>
+			</div>
+		</div>
+
+		<!-- Blogs Section -->
+		<div class="section" id="blogs">
+			<h2 class="section-title">Blogs</h2>
+
+			<div class="blog-item">
+				<a href="grokking.html" class="blog-title">Grokking</a>
+				<div class="blog-subtitle">Literature Review</div>
+				<div class="blog-meta">Coming soon</div>
+			</div>
+		</div>
 	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/main.js"></script>
 </body>
 
 </html>
