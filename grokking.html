@@ -244,43 +244,42 @@
 			<h3><a href="https://arxiv.org/pdf/2303.11873" target="_blank">A Tale of Two Circuits: Grokking as
 					Competition of Sparse and Dense Subnetworks</a></h3>
 			<p>
-				This paper connects the Lottery Ticket Hypothesis with grokking, exploring how grokking arises from the
-				competition between a dense subnetwork, which initially dominates but generalizes poorly, and a sparse
+				<!-- This paper explores shows that initially dominates but generalizes poorly, and a sparse
 				subnetwork that takes over after the grokking phase. The study highlights that the grokking phase
 				transition corresponds to targeted norm growth in specific neurons, leading to the emergence of a sparse
 				subnetwork. The authors speculate that the principles observed in grokking could extend to large
-				language models, where targeted norm growth may facilitate emergent behaviors.
+				language models, where targeted norm growth may facilitate emergent behaviors. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2306.13253" target="_blank">Predicting Grokking Long Before it Happens: A
 					Look into the Loss Landscape of Models Which Grok</a></h3>
 			<p>
-				This paper proposes a novel method to predict grokking early in the training process by analyzing the
+				<!-- This paper proposes a novel method to predict grokking early in the training process by analyzing the
 				learning curve during the initial epochs. By identifying specific oscillatory patterns in the loss
 				landscape, the method can indicate whether a model will grok, allowing for computational savings by
 				stopping training early if grokking is unlikely. The study introduces the use of spectral signatures
 				derived from the Fourier transform of the loss function to quantify the oscillations in the early
-				training phase. These low-frequency oscillations are shown to be predictive of grokking.
+				training phase. These low-frequency oscillations are shown to be predictive of grokking. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2309.02390" target="_blank">Explaining Grokking Through Circuit
 					Efficiency</a></h3>
 			<p>
-				This work explains that grokking occurs due to the existence of two types of circuits: a memorizing
+				<!-- This work explains that grokking occurs due to the existence of two types of circuits: a memorizing
 				circuit that learns quickly but generalizes poorly, and a generalizing circuit that learns more slowly
 				but is more efficient in terms of parameter norms. The efficiency of the memorizing circuit decreases
 				with an increase in the training dataset size, while the efficiency of the generalizing circuit remains
 				constant. The study introduces two novel behaviors—ungrokking and semi-grokking. Ungrokking occurs when
 				a network that has successfully grokked is further trained on a smaller dataset, causing it to regress
-				to memorization and lose generalization.
+				to memorization and lose generalization. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2308.09543" target="_blank">Delays, Detours, and Forks in the Road:
 					Latent State Models of Training Dynamics</a></h3>
 			<p>
-				This paper focuses on understanding training dynamics and how they relate to the grokking phenomenon.
+				<!-- This paper focuses on understanding training dynamics and how they relate to the grokking phenomenon.
 				The research provides insights into the latent states that models traverse during training and how these
-				affect generalization behavior.
+				affect generalization behavior. -->
 			</p>
 
 			<h2>Theoretical Perspectives</h2>
@@ -288,40 +287,40 @@
 			<h3><a href="https://arxiv.org/pdf/2402.15555" target="_blank">Deep Networks Always Grok and Here is Why</a>
 			</h3>
 			<p>
-				This work provides theoretical foundations for understanding grokking. The paper proposes a new local
+				<!-- This work provides theoretical foundations for understanding grokking. The paper proposes a new local
 				complexity measure which assesses the density of "linear regions" in the DNN's input-output mapping. The
 				paper discusses a phase transition in the linear regions of the DNN during training. After this
 				transition, the linear regions migrate away from training samples and towards the decision boundary. The
 				authors introduce the concept of "delayed robustness," where a DNN becomes robust to adversarial
-				examples long after it has achieved generalization.
+				examples long after it has achieved generalization. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2402.10688" target="_blank">Towards Uncovering How Large Language Model
 					Works: An Explainability Perspective</a></h3>
 			<p>
-				This paper examines grokking from an explainability perspective, providing insights into how large
-				language models internalize patterns during the grokking process.
+				<!-- This paper examines grokking from an explainability perspective, providing insights into how large
+				language models internalize patterns during the grokking process. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2205.10343" target="_blank">Towards Understanding Grokking: An Effective
 					Theory of Representation Learning</a></h3>
 			<p>
-				The study identifies four distinct learning phases: comprehension, grokking, memorization, and
+				<!-- The study identifies four distinct learning phases: comprehension, grokking, memorization, and
 				confusion. These phases illustrate how models transition through different states of learning and
 				generalization, with the grokking phase being particularly significant for delayed generalization. The
 				concept of a "Goldilocks zone" is introduced, where representation learning occurs optimally between the
-				extremes of memorization and confusion.
+				extremes of memorization and confusion. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/abs/2311.18817" target="_blank">Dichotomy of Early and Late Phase Implicit
 					Biases Can Provably Induce Grokking</a></h3>
 			<p>
-				This paper identifies a dichotomy between early and late phase implicit biases in neural network
+				<!-- This paper identifies a dichotomy between early and late phase implicit biases in neural network
 				training. In the early phase, training is dominated by kernel predictors due to large initialization,
 				which focuses on overfitting the training data. In contrast, the late phase bias shifts towards min-norm
 				or max-margin predictors, which generalize better. The paper proves that a sharp transition from
 				memorization to generalization occurs due to the shift from the early phase kernel regime to the late
-				phase rich regime.
+				phase rich regime. -->
 			</p>
 
 			<h2>Corrupted Data and Memorization</h2>
@@ -329,12 +328,12 @@
 			<h3><a href="https://arxiv.org/pdf/2310.13061" target="_blank">To Grok or Not to Grok: Disentangling
 					Generalization and Memorization on Corrupted Algorithmic Datasets</a></h3>
 			<p>
-				This paper investigates the balance between memorization and generalization in neural networks trained
+				<!-- This paper investigates the balance between memorization and generalization in neural networks trained
 				on datasets with corrupted labels. It highlights that networks can memorize incorrect examples while
 				simultaneously learning the underlying rules, achieving high generalization performance. A significant
 				finding is that neurons responsible for memorization can be explicitly identified and pruned, leading to
 				perfect generalization. The study emphasizes the effectiveness of regularization methods such as weight
-				decay, dropout, and BatchNorm in helping the network ignore corrupted data during training.
+				decay, dropout, and BatchNorm in helping the network ignore corrupted data during training. -->
 			</p>
 
 			<h2>Training Dynamics and Optimization</h2>
@@ -342,22 +341,22 @@
 			<h3><a href="https://arxiv.org/abs/2310.06110" target="_blank">Grokking as the Transition from Lazy to Rich
 					Training Dynamics</a></h3>
 			<p>
-				This work proposes that grokking results from delayed feature learning, where networks initially
+				<!-- This work proposes that grokking results from delayed feature learning, where networks initially
 				memorize data before adapting their representations for better generalization. The authors show that
 				grokking can happen even when weight norm increases, contradicting the idea that weight decay is
 				essential for grokking. The paper posits that early training dynamics resemble lazy learning, where
-				networks memorize data, while later stages involve rich learning as features adapt for generalization.
+				networks memorize data, while later stages involve rich learning as features adapt for generalization. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/abs/2206.04817" target="_blank">The Slingshot Mechanism: An Empirical Study
 					of Adaptive Optimizers and the Grokking Phenomenon</a></h3>
 			<p>
-				The Slingshot Mechanism is characterized by cyclic phase transitions between stable and unstable
+				<!-- The Slingshot Mechanism is characterized by cyclic phase transitions between stable and unstable
 				training regimes, observed as cyclic behavior in the norm of the last layer's weights. The mechanism
 				plays a crucial role in the grokking phenomenon, where a sudden transition from poor to perfect
 				generalization occurs. Grokking frequently coincides with the onset of Slingshot phases. The presence
 				and frequency of Slingshot cycles are sensitive to hyperparameters, particularly the ε parameter of
-				adaptive optimizers. Smaller ε values increase the frequency of Slingshot cycles and promote grokking.
+				adaptive optimizers. Smaller ε values increase the frequency of Slingshot cycles and promote grokking. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/abs/2303.06173" target="_blank">Unifying Grokking and Double Descent</a></h3>
@@ -375,12 +374,12 @@
 			<h3><a href="https://arxiv.org/abs/2405.20233" target="_blank">Grokfast: Accelerated Grokking by Amplifying
 					Slow Gradients</a></h3>
 			<p>
-				This paper introduces the Grokfast algorithm, designed to accelerate the grokking phenomenon by
+				<!-- This paper introduces the Grokfast algorithm, designed to accelerate the grokking phenomenon by
 				amplifying slow-varying gradient components. The algorithm decomposes gradient signals into fast and
 				slow components, targeting the slow component that contributes to delayed generalization. Grokfast uses
 				spectral decomposition of parameter trajectories, and by amplifying the low-frequency (slow-varying)
 				components, the algorithm significantly reduces the time to achieve generalization, making models grok
-				up to 50 times faster.
+				up to 50 times faster. -->
 			</p>
 
 			<h2>Beyond Algorithmic Data</h2>
@@ -388,12 +387,12 @@
 			<h3><a href="https://arxiv.org/abs/2210.01117" target="_blank">Omnigrok: Grokking Beyond Algorithmic
 					Data</a></h3>
 			<p>
-				This study shows that grokking can occur in a variety of tasks beyond algorithmic data, such as image
+				<!-- This study shows that grokking can occur in a variety of tasks beyond algorithmic data, such as image
 				classification, sentiment analysis, and molecular prediction. Grokking is caused by the mismatch between
 				training and test loss landscapes, resembling L and U shapes, respectively. The paper identifies
 				representation learning as crucial to grokking, especially in tasks heavily reliant on high-quality
 				representations. Large initialization scales and small weight decay can induce grokking, showing how
-				training dynamics are sensitive to these factors.
+				training dynamics are sensitive to these factors. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/abs/2305.18741" target="_blank">Grokking of Hierarchical Structure in Vanilla
@@ -411,13 +410,13 @@
 			<h3><a href="https://arxiv.org/abs/2405.15071" target="_blank">Grokked Transformers are Implicit Reasoners:
 					A Mechanistic Journey to the Edge of Generalization</a></h3>
 			<p>
-				This paper investigates whether transformers can learn implicit reasoning skills such as composition and
+				<!-- This paper investigates whether transformers can learn implicit reasoning skills such as composition and
 				comparison on datasets other than modulo arithmetic. It finds that transformers can learn implicit
 				reasoning but only through grokking. The paper emphasizes that data distribution, rather than size,
 				plays a critical role in grokking and generalization. A higher ratio of inferred facts to atomic facts
 				accelerates grokking, underscoring the importance of data composition over sheer volume. Fully grokked
 				transformers outperform state-of-the-art models like GPT-4-Turbo and Gemini-1.5-Pro in complex reasoning
-				tasks.
+				tasks. -->
 			</p>
 
 			<h2>Experimental Investigations</h2>
@@ -425,45 +424,45 @@
 			<h3><a href="https://arxiv.org/pdf/2412.10898" target="_blank">Exploring Grokking: Experimental and
 					Mechanistic Investigations</a></h3>
 			<p>
-				This work provides comprehensive empirical experiments on grokking, exploring various aspects of the
-				phenomenon through systematic experimentation.
+				<!-- This work provides comprehensive empirical experiments on grokking, exploring various aspects of the
+				phenomenon through systematic experimentation. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2412.09810" target="_blank">The Complexity Dynamics of Grokking</a></h3>
 			<p>
-				This paper examines the rise and fall of complexity during training of a neural network, providing
-				insights into how model complexity evolves throughout the grokking process.
+				<!-- This paper examines the rise and fall of complexity during training of a neural network, providing
+				insights into how model complexity evolves throughout the grokking process. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2502.01774" target="_blank">Grokking Explained: A Statistical
 					Phenomenon</a></h3>
 			<p>
-				This work explains grokking as being due to distribution shift in the dataset, providing a statistical
-				perspective on the phenomenon.
+				<!-- This work explains grokking as being due to distribution shift in the dataset, providing a statistical
+				perspective on the phenomenon. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2502.01739" target="_blank">Grokking vs. Learning: Same Features,
 					Different Encodings</a></h3>
 			<p>
-				This paper compares grokking with standard learning, showing that while the features learned may be the
-				same, the encodings differ between the two processes.
+				<!-- This paper compares grokking with standard learning, showing that while the features learned may be the
+				same, the encodings differ between the two processes. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2501.04697" target="_blank">Grokking at the Edge of Numerical
 					Stability</a></h3>
 			<p>
-				This work examines softmax collapse due to numerical instability and how addressing this leads to faster
-				grokking, highlighting the importance of numerical considerations in training.
+				<!-- This work examines softmax collapse due to numerical instability and how addressing this leads to faster
+				grokking, highlighting the importance of numerical considerations in training. -->
 			</p>
 
 			<h3><a href="https://arxiv.org/abs/2405.19454" target="_blank">Deep Grokking: Would Deep Neural Networks
 					Generalize Better?</a></h3>
 			<p>
-				The study finds that deep neural networks, such as 12-layer MLPs, are more susceptible to grokking than
+				<!-- The study finds that deep neural networks, such as 12-layer MLPs, are more susceptible to grokking than
 				shallower models. Unlike shallow models that typically exhibit a single sharp increase in test accuracy,
 				deep networks display a multi-stage generalization pattern with two distinct surges in test accuracy.
 				The research identifies a "tunnel effect" in deep networks, where deeper layers compress features into
-				low-rank representations.
+				low-rank representations. -->
 			</p>
 
 			<h2>Mechanistic Interpretability</h2>
@@ -483,22 +482,22 @@
 
 			<h3><a href="https://arxiv.org/abs/2301.02679" target="_blank">Grokking Modular Arithmetic</a></h3>
 			<p>
-				This paper shows that simple trigonometric functions of few frequencies and inputs can be used to
+				<!-- This paper shows that simple trigonometric functions of few frequencies and inputs can be used to
 				approximate learning the task of modular arithmetic on multi-layer MLP. They use inverse participation
 				ratio defined in terms of Fourier transform weights to indicate if the weights are random or periodic.
 				At initialization the weights are random, but once the model learns to grok on arithmetic data, the
-				Fourier-transformed data are more localized (fewer frequencies).
+				Fourier-transformed data are more localized (fewer frequencies). -->
 			</p>
 
 			<h3><a href="https://arxiv.org/pdf/2402.16726" target="_blank">Interpreting Grokked Transformers in Complex
 					Modular Arithmetic</a></h3>
 			<p>
-				This paper investigates how complex modular arithmetic is learned by models through reverse engineering.
+				<!-- This paper investigates how complex modular arithmetic is learned by models through reverse engineering.
 				They identify distinct dynamics for different operations: subtraction introduces asymmetry in the
 				Transformer model, multiplication requires cosine-biased components across all frequencies in the
 				Fourier domain, and polynomials often reflect patterns from simpler arithmetic. The paper introduces two
 				new metrics: Fourier Frequency Sparsity (FFS) and Fourier Coefficient Ratio (FCR), which help indicate
-				late generalization and characterize the internal representations of models.
+				late generalization and characterize the internal representations of models. -->
 			</p>
 
 			<h2>Pruning and Subnetworks</h2>
@@ -506,13 +505,13 @@
 			<h3><a href="https://arxiv.org/abs/2310.19470" target="_blank">Bridging Lottery Ticket and Grokking: Is
 					Weight Norm Sufficient to Explain Delayed Generalization?</a></h3>
 			<p>
-				The paper investigates the grokking phenomenon, arguing that identifying optimal subnetworks, or
+				<!-- The paper investigates the grokking phenomenon, arguing that identifying optimal subnetworks, or
 				"grokking tickets," is key to achieving generalization. They demonstrate that when using grokking
 				tickets, generalization happens earlier than in non-LTH networks, suggesting that finding these optimal
 				subnetworks plays a crucial role in transitioning from memorization to generalization. They show that
 				sparsity alone does not explain grokking, and they demonstrate empirically that the grokked ticket is
 				capable of identifying patterns more quickly than the dense network by looking into the entropy of the
-				discrete Fourier transform of the representations.
+				discrete Fourier transform of the representations. -->
 			</p>
 
 			<h2>Recent Papers (To Read)</h2>
@@ -521,7 +520,7 @@
 				in red to indicate they haven't been read yet.
 			</p>
 
-			<h3><a href="https://arxiv.org/abs/2506.21551" target="_blank" class="to-read">Where to Find Grokking in LLM
+			<!-- <h3><a href="https://arxiv.org/abs/2506.21551" target="_blank" class="to-read">Where to Find Grokking in LLM
 					Pretraining? Monitor Memorization-to-Generalization without Test</a></h3>
 			<p>
 				This paper presents the first study of grokking in practical LLM pretraining. Specifically, we
@@ -543,9 +542,9 @@
 				based metrics induce zero cost but can faithfully track and monitor the generalization of LLMs on
 				downstream tasks, which, in conventional settings, requires costly instruction tuning and benchmark
 				evaluation.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2509.21519" target="_blank" class="to-read">Provable Scaling Laws of
+			<!-- <h3><a href="https://arxiv.org/abs/2509.21519" target="_blank" class="to-read">Provable Scaling Laws of
 					Feature Emergence from Learning Dynamics of Grokking</a></h3>
 			<p>
 				While the phenomenon of grokking, i.e., delayed generalization, has been studied extensively, it remains
@@ -566,9 +565,9 @@
 				scaling laws of feature emergence, memorization and generalization, and reveals why recent optimizers
 				such as Muon can be effective, from the first principles of gradient dynamics. Our analysis can be
 				extended to multi-layers.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2512.00686" target="_blank" class="to-read">Using Physics-Inspired
+			<!-- <h3><a href="https://arxiv.org/abs/2512.00686" target="_blank" class="to-read">Using Physics-Inspired
 					Singular Learning Theory to Understand Grokking & Other Phase Transitions in Modern Neural
 					Networks</a></h3>
 			<p>
@@ -584,9 +583,9 @@
 				autoencoders). Our experiments recover known scaling laws while others yield meaningful deviations from
 				theoretical expectations. Overall, our paper illustrates the many merits of SLT for understanding neural
 				network phase transitions, and poses open research questions for the field.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2510.25966" target="_blank" class="to-read">Grokking in the Ising
+			<!-- <h3><a href="https://arxiv.org/abs/2510.25966" target="_blank" class="to-read">Grokking in the Ising
 					Model</a></h3>
 			<p>
 				Delayed generalization, termed grokking, in a machine learning calculation occurs when the training
@@ -597,9 +596,9 @@
 				network transforms into a relatively sparse subnetwork. This in turn reduces the confusion associated
 				with a multiplicity of paths. The network can then identify the common features of the input classes and
 				hence generalize to the recognition of previously unseen patterns.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2506.05718" target="_blank" class="to-read">Grokking Beyond the Euclidean
+			<!-- <h3><a href="https://arxiv.org/abs/2506.05718" target="_blank" class="to-read">Grokking Beyond the Euclidean
 					Norm of Model Parameters</a></h3>
 			<p>
 				Grokking refers to a delayed generalization following overfitting when optimizing artificial neural
@@ -614,9 +613,9 @@
 				different property P, as the ℓ₂ norm grows in many cases where no weight decay is used, but the model
 				generalizes anyway. We also show that grokking can be amplified solely through data selection, with any
 				other hyperparameter fixed.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2505.11411" target="_blank" class="to-read">Is Grokking a Computational
+			<!-- <h3><a href="https://arxiv.org/abs/2505.11411" target="_blank" class="to-read">Is Grokking a Computational
 					Glass Relaxation?</a></h3>
 			<p>
 				Understanding neural network's (NN) generalizability remains a central question in deep learning
@@ -636,9 +635,9 @@
 				which can eliminate grokking without any constraints and find high-norm generalizing solutions. This
 				provides strictly-defined counterexamples to theory attributing grokking solely to weight norm evolution
 				towards the Goldilocks zone and also suggests new potential ways for optimizer design.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2504.20752" target="_blank" class="to-read">Grokking in the Wild: Data
+			<!-- <h3><a href="https://arxiv.org/abs/2504.20752" target="_blank" class="to-read">Grokking in the Wild: Data
 					Augmentation for Real-World Multi-Hop Reasoning with Transformers</a></h3>
 			<p>
 				Transformers have achieved great success in numerous NLP tasks but continue to exhibit notable gaps in
@@ -656,9 +655,9 @@
 				the formation of generalizing circuits inside Transformers. Our findings suggest that grokking-based
 				data augmentation can unlock implicit multi-hop reasoning capabilities, opening the door to more robust
 				and interpretable factual reasoning in large-scale language models.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2504.17243" target="_blank" class="to-read">NeuralGrok: Accelerate
+			<!-- <h3><a href="https://arxiv.org/abs/2504.17243" target="_blank" class="to-read">NeuralGrok: Accelerate
 					Grokking by Neural Gradient Transformation</a></h3>
 			<p>
 				Grokking is proposed and widely studied as an intricate phenomenon in which generalization is achieved
@@ -675,16 +674,16 @@
 				which explains that NeuralGrok effectively facilitates generalization by reducing the model complexity.
 				We offer valuable insights on the grokking phenomenon of Transformer models, which encourages a deeper
 				understanding of the fundamental principles governing generalization ability.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2412.18624" target="_blank" class="to-read">How to Explain Grokking</a>
+			<!-- <h3><a href="https://arxiv.org/abs/2412.18624" target="_blank" class="to-read">How to Explain Grokking</a>
 			</h3>
 			<p>
 				Explanation of grokking (delayed generalization) in learning is given by modeling grokking by the
 				stochastic gradient Langevin dynamics (Brownian motion) and applying the ideas of thermodynamics.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2407.12332" target="_blank" class="to-read">Why Do You Grok? A
+			<!-- <h3><a href="https://arxiv.org/abs/2407.12332" target="_blank" class="to-read">Why Do You Grok? A
 					Theoretical Analysis of Grokking Modular Addition</a></h3>
 			<p>
 				We present a theoretical explanation of the "grokking" phenomenon, where a model generalizes long after
@@ -698,9 +697,9 @@
 				as simple Transformers, leave the kernel regime only after initially overfitting. Taken together, our
 				results strongly support the case for grokking as a consequence of the transition from kernel-like
 				behavior to limiting behavior of gradient descent on deep networks.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2405.12755" target="_blank" class="to-read">Progress Measures for
+			<!-- <h3><a href="https://arxiv.org/abs/2405.12755" target="_blank" class="to-read">Progress Measures for
 					Grokking on Real-world Tasks</a></h3>
 			<p>
 				Grokking, a phenomenon where machine learning models generalize long after overfitting, has been
@@ -713,9 +712,9 @@
 				correlation with grokking in real-world datasets compared to weight norms. Our findings suggest that
 				while weight norms might usually correlate with grokking and our progress measures, they are not
 				causative, and our proposed measures provide a better understanding of the dynamics of grokking.
-			</p>
+			</p> -->
 
-			<h3><a href="https://arxiv.org/abs/2310.17247" target="_blank" class="to-read">Grokking Beyond Neural
+			<!-- <h3><a href="https://arxiv.org/abs/2310.17247" target="_blank" class="to-read">Grokking Beyond Neural
 					Networks: An Empirical Exploration with Model Complexity</a></h3>
 			<p>
 				In some settings neural networks exhibit a phenomenon known as grokking, where they achieve perfect or
@@ -727,16 +726,16 @@
 				in non-neural architectures shows that grokking is not restricted to settings considered in current
 				theoretical and empirical studies. Instead, grokking may be possible in any model where solution search
 				is guided by complexity and error.
-			</p>
+			</p> -->
 
-			<h2>Additional Resources</h2>
+			<!-- <h2>Additional Resources</h2>
 			<p>
 				For an interactive tutorial on modular arithmetic and grokking, see: <a
 					href="https://pair.withgoogle.com/explorables/grokking/" target="_blank">Google PAIR Grokking
 					Explorable</a>
-			</p>
+			</p> -->
 
-			<h2>Conclusion</h2>
+			<!-- <h2>Conclusion</h2>
 			<p>
 				Grokking represents a fascinating and complex phenomenon in deep learning that challenges our
 				understanding of generalization. The literature reveals multiple perspectives on grokking—from circuit
@@ -745,7 +744,7 @@
 				hyperparameters, the existence of distinct learning phases, and the presence of both memorizing and
 				generalizing circuits. Future research directions include extending grokking to more complex tasks,
 				developing better prediction methods, and understanding its implications for large language models.
-			</p>
+			</p> -->
 		</div>
 	</div>
 </body>
