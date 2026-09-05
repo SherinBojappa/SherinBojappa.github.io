@@ -250,6 +250,37 @@
 			font-style: italic;
 		}
 
+		/* Research Section */
+		.research-intro {
+			font-size: 17px;
+			line-height: 1.6;
+			margin-bottom: 25px;
+		}
+
+		.research-theme {
+			margin-bottom: 25px;
+		}
+
+		.research-theme-title {
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			margin: 0 0 5px 0;
+		}
+
+		.research-paper {
+			margin-bottom: 5px;
+		}
+
+		.research-desc {
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		.publication-list {
+			margin-top: 30px;
+		}
+
 		/* News Section */
 		.news-item {
 			margin-bottom: 15px;
@@ -355,6 +386,7 @@
 			<a href="#news">News</a>
 			<a href="#education">Education</a>
 			<a href="#experience">Experience</a>
+			<a href="#research">Research</a>
 			<a href="#publications">Publications</a>
 			<!-- <a href="#blogs">Blogs</a> -->
 		</div>
@@ -404,6 +436,109 @@
 			</div>
 			<div class="news-item">
 				<span class="news-date">[March 2024]</span> Our work on ReLoRA accepted to ICLR 2024!
+			</div>
+		</div>
+
+		<!-- Research & Publications Section -->
+		<div class="section" id="research">
+			<h2 class="section-title">Research &amp; Publications</h2>
+			<p class="research-intro">
+				My research takes a data-centric approach to understanding language-model abilities: how training data can shape which capabilities emerge, how data exposure can reveal generalization during pre-training, and how evaluation data can uncover capabilities and failures that final-answer benchmarks miss.
+			</p>
+
+			<div class="research-theme">
+				<h3 class="research-theme-title">Eliciting abilities through pre-training data</h3>
+				<div class="research-paper">
+					<a href="https://aclanthology.org/2024.findings-naacl.79/" target="_blank" class="publication-title">Emergent Abilities in Reduced-Scale Generative Language Models</a>
+					<span class="publication-venue">— Findings of NAACL 2024</span>
+				</div>
+				<p class="research-desc">
+					I study how the structure of pre-training data affects which capabilities language models acquire. By simplifying the pre-training distribution, I investigate whether abilities typically associated with larger models—such as zero-shot in-context learning—can emerge at much smaller scales.
+				</p>
+			</div>
+
+			<div class="research-theme">
+				<h3 class="research-theme-title">Understanding generalization during pre-training</h3>
+				<div class="research-paper">
+					<a href="https://arxiv.org/abs/2606.00230" target="_blank" class="publication-title">A Pre-Training Analogue of Grokking in Language Models: Tracing Delayed Grammatical Generalization</a>
+					<span class="publication-venue">— Under Review / Preprint</span>
+				</div>
+				<p class="research-desc">
+					I use data exposure during pre-training as a way to study when models move beyond what they have directly seen. By separating exposed and unexposed grammatical examples, I trace delayed generalization across training and analyze how model representations and attention change as this behavior emerges.
+				</p>
+			</div>
+
+			<div class="research-theme">
+				<h3 class="research-theme-title">Evaluating reasoning beyond final answers</h3>
+				<div class="research-paper">
+					<a href="https://arxiv.org/abs/2606.06526" target="_blank" class="publication-title">CROWDMATH: A Dataset of Crowdsourced Mathematical Research Discussions</a>
+					<span class="publication-venue">— Findings of EMNLP 2026</span>
+				</div>
+				<p class="research-desc">
+					I develop process-aware evaluations for reasoning capabilities that are difficult to capture with standard final-answer benchmarks. Using the CROWDMATH program we develop an annotated dataset with collaborative research discussions and study whether language models can recognize partial progress, errors, corrections, and completed results in collaborative mathematical problem solving.
+				</p>
+			</div>
+
+			<div class="research-theme">
+				<h3 class="research-theme-title">Efficient language-model pre-training</h3>
+				<div class="research-paper">
+					<a href="https://arxiv.org/abs/2307.05695" target="_blank" class="publication-title">ReLoRA: High-Rank Training Through Low-Rank Updates</a>
+					<span class="publication-venue">— ICLR 2024</span>
+				</div>
+				<p class="research-desc">
+					I have also worked on making large-scale language-model training more parameter-efficient. In ReLoRA, we introduce a method for training high-rank neural networks through a sequence of low-rank updates, showing that Transformer language models up to 1.3B parameters can achieve performance comparable to standard full-rank training while reducing memory use and improving training speed. The work explores whether techniques commonly used for parameter-efficient adaptation can also make pre-training more efficient.
+				</p>
+			</div>
+
+			<div class="publication-list" id="publications">
+				<div class="publication-item">
+				<a href="https://arxiv.org/abs/2404.02204" target="_blank" class="publication-title">Emergent Abilities
+					in Reduced-Scale Generative Language Models</a><br>
+				<span class="publication-authors"><strong>S. Muckatira</strong>, V. Deshpande, V. Lialin, A.
+					Rumshisky</span><br>
+				<span class="publication-venue">NAACL Findings, 2024</span>
+			</div>
+
+				<div class="publication-item">
+				<a href="https://arxiv.org/abs/2307.05695" target="_blank" class="publication-title">ReLoRA: High-Rank
+					Training Through Low-Rank Updates</a><br>
+				<span class="publication-authors">V. Lialin, <strong>S. Muckatira</strong>, N. Shivagunde, A.
+					Rumshisky</span><br>
+				<span class="publication-venue">ICLR, 2024</span>
+			</div>
+
+				<div class="publication-item">
+				<a href="https://arxiv.org/abs/2404.02054" target="_blank" class="publication-title">Deconstructing
+					In-Context Learning: Understanding Prompts via Corruption</a><br>
+				<span class="publication-authors">N. Shivagunde, V. Lialin, <strong>S. Muckatira</strong>, A.
+					Rumshisky</span><br>
+				<span class="publication-venue">LREC-Coling, 2024</span>
+			</div>
+
+				<div class="publication-item">
+				<a href="https://arxiv.org/abs/2311.05821" target="_blank" class="publication-title">Let's Reinforce
+					Step by Step</a><br>
+				<span class="publication-authors">S. Pan, V. Lialin, <strong>S. Muckatira</strong>, A.
+					Rumshisky</span><br>
+				<span class="publication-venue">NeurIPS 2023 Workshop on Instruction Tuning and Instruction
+					Following</span>
+			</div>
+
+				<div class="publication-item">
+				<a href="https://arxiv.org/abs/2008.12141" target="_blank" class="publication-title">Properties Of
+					Winning Tickets On Skin Lesion Classification</a><br>
+				<span class="publication-authors"><strong>S. Muckatira</strong></span><br>
+				<span class="publication-venue">ECCV WiCV Workshop, 2020</span>
+			</div>
+
+				<div class="publication-item">
+				<a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank"
+					class="publication-title">Image-level and group-level models for Drosophila gene expression pattern
+					annotation</a><br>
+				<span class="publication-authors">Q. Sun, <strong>S. Muckatira</strong>, L. Yuan, S. Ji, S. Newfeld, S.
+					Kumar, J. Ye</span><br>
+				<span class="publication-venue">BMC bioinformatics, 2013</span>
+			</div>
 			</div>
 		</div>
 
@@ -548,60 +683,6 @@
 					<li>Implemented communication interfaces between host processors and co-processors to enhance
 						functionality in Power Amplifier characterization applications.</li>
 				</ul>
-			</div>
-		</div>
-
-		<!-- Publications Section -->
-		<div class="section" id="publications">
-			<h2 class="section-title">Publications</h2>
-
-			<div class="publication-item">
-				<a href="https://arxiv.org/abs/2404.02204" target="_blank" class="publication-title">Emergent Abilities
-					in Reduced-Scale Generative Language Models</a><br>
-				<span class="publication-authors"><strong>S. Muckatira</strong>, V. Deshpande, V. Lialin, A.
-					Rumshisky</span><br>
-				<span class="publication-venue">NAACL Findings, 2024</span>
-			</div>
-
-			<div class="publication-item">
-				<a href="https://arxiv.org/abs/2307.05695" target="_blank" class="publication-title">ReLoRA: High-Rank
-					Training Through Low-Rank Updates</a><br>
-				<span class="publication-authors">V. Lialin, <strong>S. Muckatira</strong>, N. Shivagunde, A.
-					Rumshisky</span><br>
-				<span class="publication-venue">ICLR, 2024</span>
-			</div>
-
-			<div class="publication-item">
-				<a href="https://arxiv.org/abs/2404.02054" target="_blank" class="publication-title">Deconstructing
-					In-Context Learning: Understanding Prompts via Corruption</a><br>
-				<span class="publication-authors">N. Shivagunde, V. Lialin, <strong>S. Muckatira</strong>, A.
-					Rumshisky</span><br>
-				<span class="publication-venue">LREC-Coling, 2024</span>
-			</div>
-
-			<div class="publication-item">
-				<a href="https://arxiv.org/abs/2311.05821" target="_blank" class="publication-title">Let's Reinforce
-					Step by Step</a><br>
-				<span class="publication-authors">S. Pan, V. Lialin, <strong>S. Muckatira</strong>, A.
-					Rumshisky</span><br>
-				<span class="publication-venue">NeurIPS 2023 Workshop on Instruction Tuning and Instruction
-					Following</span>
-			</div>
-
-			<div class="publication-item">
-				<a href="https://arxiv.org/abs/2008.12141" target="_blank" class="publication-title">Properties Of
-					Winning Tickets On Skin Lesion Classification</a><br>
-				<span class="publication-authors"><strong>S. Muckatira</strong></span><br>
-				<span class="publication-venue">ECCV WiCV Workshop, 2020</span>
-			</div>
-
-			<div class="publication-item">
-				<a href="https://link.springer.com/article/10.1186/1471-2105-14-350" target="_blank"
-					class="publication-title">Image-level and group-level models for Drosophila gene expression pattern
-					annotation</a><br>
-				<span class="publication-authors">Q. Sun, <strong>S. Muckatira</strong>, L. Yuan, S. Ji, S. Newfeld, S.
-					Kumar, J. Ye</span><br>
-				<span class="publication-venue">BMC bioinformatics, 2013</span>
 			</div>
 		</div>
 
